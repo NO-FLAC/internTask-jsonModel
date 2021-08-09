@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+
+    <title>dataTableVisualizer</title>
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous">
+</head>
+<body>
+    <table class="table table-sm table-bordered">
+        <thead class="bg-info">
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Trade</th>
+            <th scope="col">High</th>
+            <th scope="col">Low</th>
+            <th scope="col">Open</th>
+            <th scope="col">Close</th>
+            <th scope="col">Volume</th>
+          </tr>
+        </thead>
+        <tbody>
+          <h1 class="text-white bg-dark" >Stock Market Data Table</h1>
+            {%for i in data%}
+             <tr>
+              <td>{{i.date}}</td>
+              <td>{{i.trade_code}}</td>
+              <td>{{i.high}}</td>
+              <td>{{i.low}}</td>
+              <td>{{i.open}}</td>
+              <td>{{i.close}}</td>
+              <td>{{i.volume}}</td>
+             </tr>
+            {% endfor %}
+        </tbody>
+     </table>
+</body>
+</html>
